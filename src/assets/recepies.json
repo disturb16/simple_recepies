@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Pasta all’ Amatriciana",
+    "description": "Es bastante parecida a la panceta. No es común encontrarla en nuestros mercados, pero puedes preguntar a tu carnicero si tiene. Si no, siempre puedes preparar una versión con panceta que queda bastante similar.",
+    "content": "Lo primero que vamos a hacer es calentar agua con sal en una olla  a fuego alto. Cuando empiece a hervir, pondremos la pasta a cocer. Si tienes bucatini, sería lo ideal. Si no, puedes utilizar espaguetis o tallarines. En este caso yo utilicé fideuá, que es como el bucatini, pero corto. Cortaremos una cebolla y la picamos a nuestro gusto. Si no nos gusta encontrar el tropezón muy grande, podemos picarla mucho en trocitos muy pequeños. En una sartén, con dos cucharadas soperas de aceite de oliva, vamos a pochar la cebolla a fuego bajo, hasta que veamos que queda transparente, sin que llegue a quemarse. Recuerda poner el fuego bajo, porque si no se puede quemar y se quedará dura. Queremos lo contrario, que quede suave y blandita.",
+    "category": "cocina italiana"
+  },
+  {
+    "id": 2,
+    "title": "Coliflor gratinada",
+    "description": "Tiene poquísima grasa, de hecho nada, por eso nos la recomiendan todos los nutricionistas cuando queremos bajar de peso. Y otro de sus beneficios es que se puede hacer de muchas maneras, salteada, hervida, asada, cruda…",
+    "content": "1- Primero nos vamos a asegurar de que está bien limpia, porque puede traer tierra y algunos bichitos. Nos aseguraremos que no tiene partes marrones y oxidadas (las quitamos con la ayuda de un cuchillo). La dejaremos en remojo en agua caliente con sal unos 10-15 minutos antes de empezar a cocinar, para asegurarnos de desinfectarla un poco. Después, la secaremos y cortamos en trozos del mismo tamaño. 2- En una olla, pondremos a calentar agua con sal. Cuando veamos que humea, agregamos la coliflor. Un truco para que no huela mucho a la hora de cocer, es agregar al agua un chorro de leche. Vamos a dejar cociendo de 10 a 15 minutos, dependiendo cómo nos guste de crujiente. 3- Una vez cocida, apagamos el fuego y escurrimos el agua con la ayuda de un colador de pasta, por ejemplo.",
+    "category": "cocina española"
+  },
+  {
+    "id": 3,
+    "title": "Albóndigas guisadas con tomate",
+    "description": "Hoy volvemos con una receta que nos manda una lectora. Nuestra amiga Belén nos cuenta paso a paso cómo prepara ella sus riquísimas albóndigas. Nos encanta porque son un plato típico de nuestra gastronomía, que podemos preparar en cualquier época del año y siempre está acompañado de verduras. Porque pocas cosas hay mejores que mojar pan en la salsita de unas albóndigas. Presta atención, que empezamos.",
+    "content": "En una sartén plana con bastante aceite vamos a freír todas las albóndigas a fuego alto. Picaremos las verduras y dejaremos que se vayan pochando en una olla aparte con un poco de aceite a fuego medio-bajo. Picaremos cebolla, zanahoria, pimiento rojo y verde y un par de dientes de ajo. Cuando la verdura se haya tornado tierna (y la cebolla transparente), volcaremos todas las albóndigas fritas en la olla también y rehogaremos para que adquieran el sabor de las verduras. Pondremos salsa de tomate al gusto. Podemos utilizar el que tengamos o el que más nos guste para guisos, como: titurado, frito, casero… Pondremos también los guisantes en la olla. Removeremos bien.",
+    "category": "cocina española"
+  }
+]
