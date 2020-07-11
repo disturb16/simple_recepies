@@ -12,17 +12,26 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    meta: {
+      requiresAuth: true,
+    },
   },
   {
     path: "/recepies/:id",
     name: "RecepieContent",
     props: true,
     component: RecepieDetails,
+    meta: {
+      requiresAuth: true,
+    },
   },
   {
     path: "/users/signin",
     name: "UserSignin",
     component: UserLogin,
+    meta: {
+      requiresAuth: false,
+    },
   },
 ];
 
