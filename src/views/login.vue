@@ -7,33 +7,49 @@
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" v-model="password" />
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          v-model="password"
+        />
       </div>
-      <button type="submit" class="btn btn-primary" @click.prevent="authenticate">Submit</button>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        @click.prevent="authenticate"
+      >
+        Submit
+      </button>
     </div>
   </div>
 </template>
 
 <script>
+import firebase from "../common/firebase_setup";
+
 export default {
   name: "UserLogin",
   data() {
     return {
       email: "",
-      password: ""
+      password: "",
     };
   },
 
   methods: {
-    authenticate() {
-      if (this.email != "example@email.com" || this.password != "1234") {
-        return;
-      }
+    async authenticate() {
+      try {
+        await firebase
+          .auth()
+          .signInWithEmailAndPassword(this.email, this.password);
 
-      // loguear al usuario y redirigir a la pagina principal.
-      this.$store.commit("setUser", { email: this.email });
-      this.$router.push({ name: "Home" });
-    }
-  }
+        // redirigir a la pagina principal.
+        this.$router.push({ name: "Home" });
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
 };
 </script>

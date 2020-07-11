@@ -13,7 +13,8 @@
 </template>
 
 <script>
-import recepieList from "@/assets/recepies.json";
+import firebase from "../common/firebase_setup";
+const db = firebase.firestore();
 
 export default {
   name: "RecepieDetails",
@@ -26,11 +27,22 @@ export default {
   },
 
   created() {
-    for (const r of recepieList) {
-      if (r.id == this.id) {
-        this.recepieSelected = r;
+    this.getRecepie();
+  },
+
+  methods: {
+    async getRecepie() {
+      try {
+        const t = new Date();
+        const result = await db.doc(`recepies/${this.id}`).get();
+        this.recepieSelected = result.data();
+        // db.doc(`recepies/${this.id}`).update({
+        //   modified: t.toLocaleTimeString(),
+        // });
+      } catch (error) {
+        console.log(error);
       }
-    }
+    },
   },
 };
 </script>

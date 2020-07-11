@@ -1,5 +1,10 @@
 <template>
   <div class="container">
+    <div class="container text-left">
+      <a href="#" class="btn btn-primary" @click.prevent="logOut"
+        >Cerrar sesión</a
+      >
+    </div>
     <div class="greet">
       <h1>Instant Meal</h1>
     </div>
@@ -21,15 +26,55 @@
 
 <script>
 import cardRecepie from "@/components/RecepieCard.vue";
-import recepiesList from "@/assets/recepies.json";
+import firebase from "../common/firebase_setup";
+const db = firebase.firestore();
 
 export default {
   name: "Home",
 
   data() {
     return {
-      recepies: recepiesList,
+      recepies: [],
     };
+  },
+
+  created() {
+    this.getRecepies();
+  },
+
+  methods: {
+    async logOut() {
+      try {
+        await firebase.auth().signOut();
+        this.$router.push({ name: "UserSignin" });
+      } catch (error) {
+        console.log(error);
+      }
+    },
+
+    async getRecepies() {
+      try {
+        // Obtener la lista de documentos.
+        const result = await db
+          .collection("recepies")
+          .where("category", "==", "cocina italiana")
+          .get();
+
+        // Reiniciar arreglo de recetas.
+        this.recepies = [];
+
+        // Recorrer la lista para agregar la data
+        // al arreglo local de recetas.
+        result.forEach((doc) => {
+          const r = doc.data();
+          r.id = doc.id;
+
+          this.recepies.push(r);
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 
   components: {
