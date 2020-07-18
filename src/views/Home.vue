@@ -2,7 +2,11 @@
   <div class="container">
     <div class="container text-left">
       <a href="#" class="btn btn-primary" @click.prevent="logOut">Cerrar sesión</a>
-      <router-link to="/new-recepie" class="btn btn-primary">Agregar Receta</router-link>
+      <router-link
+        to="/new-recepie"
+        style="margin-left: 1em;"
+        class="btn btn-primary"
+      >Agregar Receta</router-link>
     </div>
     <div class="greet">
       <h1>Instant Meal</h1>
