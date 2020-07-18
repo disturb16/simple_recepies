@@ -1,19 +1,14 @@
 <template>
   <div class="container">
     <div class="container text-left">
-      <a href="#" class="btn btn-primary" @click.prevent="logOut"
-        >Cerrar sesión</a
-      >
+      <a href="#" class="btn btn-primary" @click.prevent="logOut">Cerrar sesión</a>
+      <router-link to="/new-recepie" class="btn btn-primary">Agregar Receta</router-link>
     </div>
     <div class="greet">
       <h1>Instant Meal</h1>
     </div>
 
-    <div
-      v-for="recepie in recepies"
-      :key="recepie.id"
-      class="recepie-container"
-    >
+    <div v-for="recepie in recepies" :key="recepie.id" class="recepie-container">
       <recepie-card
         :id="recepie.id"
         :title="recepie.title"
@@ -34,7 +29,7 @@ export default {
 
   data() {
     return {
-      recepies: [],
+      recepies: []
     };
   },
 
@@ -65,7 +60,7 @@ export default {
 
         // Recorrer la lista para agregar la data
         // al arreglo local de recetas.
-        result.forEach((doc) => {
+        result.forEach(doc => {
           const r = doc.data();
           r.id = doc.id;
 
@@ -74,12 +69,12 @@ export default {
       } catch (error) {
         console.log(error);
       }
-    },
+    }
   },
 
   components: {
-    "recepie-card": cardRecepie,
-  },
+    "recepie-card": cardRecepie
+  }
 };
 </script>
 

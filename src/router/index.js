@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 
 const RecepieDetails = () => import("@/views/Recepie.vue");
 const UserLogin = () => import("@/views/login.vue");
+const RecepiesNew = () => import("@/views/AddRecepie.vue");
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,14 @@ const routes = [
     name: "RecepieContent",
     props: true,
     component: RecepieDetails,
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    path: "/new-recepie",
+    name: "RecepieNew",
+    component: RecepiesNew,
     meta: {
       requiresAuth: true,
     },
