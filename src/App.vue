@@ -10,14 +10,14 @@ import firebase from "./common/firebase_setup";
 
 export default {
   created() {
-    firebase.auth().onAuthStateChanged((user) => {
+    firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.$store.commit("setUser", { uid: user.uid });
       } else {
         this.$store.commit("setUser", null);
       }
     });
-  },
+  }
 };
 </script>
 

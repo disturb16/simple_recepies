@@ -56,7 +56,7 @@ export default {
         // Obtener la lista de documentos.
         const result = await db
           .collection("recepies")
-          .where("category", "==", "cocina italiana")
+          // .where("category", "==", "cocina italiana")
           .get();
 
         // Reiniciar arreglo de recetas.
